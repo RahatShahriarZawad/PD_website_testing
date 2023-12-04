@@ -1,5 +1,5 @@
 {
-  "name": "pd_website_testing",
+  "name": "parkinsonsurvey.github.io",
   "version": "1.0.0",
   "description": "# Overview - Website collects demographic data of the patient - Website conducts computer mouse movement and keyboard tapping tests to measure arm movement - When tests have finished, website sends data to a database",
   "main": "index.html",
