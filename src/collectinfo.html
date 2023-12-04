@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='og:viewport' content='width=device-width,initial-scale=1'>
+    <meta name="og:description" content="PD tests">
+    <title>PD tests - Information collection</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/utility.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="pacman-favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <nav id="nav1">
+      <ul class="nav-items" id="nav">
+        <li><a id='header1'>PD tests</a></li>
+        <li><a id='header2' style="cursor: pointer;" href="../src/index.html">Home</a></li>
+        <li><a id='header3' style="cursor: pointer;" href="../src/about.html">About</a></li>
+      </ul> 
+    </nav>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>    
+    <script src="../js/collector.js"></script>
+      
+    <div style="text-align: center; z-index: 5; padding-top: 50px;">
+      <h1 id='headertitle' style="font-size: 300%;">Please enter your information below!</h1>
+
+      <div class="fullwidth">
+        <div class="leftblock">
+          <h1 style="font-size: 120%;">What is your age?</h1>
+        </div>
+        <div class="rightblock">
+          <input type="text" id='age' class="niceenter" value="65">
+        </div>
+      </div>
+
+      <div class="fullwidth">
+        <div class="leftblock">
+          <h1 style="font-size: 120%;">What is your Gender?</h1>
+        </div>
+        <div class="rightblock">
+          <select name="gender" id="gender" class="niceenter">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="fullwidth">
+        <div class="leftblock">
+          <h1 style="font-size: 120%;">What is your Race/ethnicity?</h1>
+        </div>
+        <div class="rightblock">
+          <select name="race" id="race" class="niceenter">
+            <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+            <option value="Asian">Asian</option>
+            <option value="Black or African American">Black or African American</option>
+            <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+            <option value="White">White</option>
+            <option value="Prefer not to specify">Prefer not to specify</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="fullwidth">
+        <div class="leftblock" style="width: 64.6%; margin-right: 500px; margin-top: 50px;">
+          <h1 style="font-size: 200%;">Do you have Parkinsons?</h1>
+        </div>
+        <div class="leftblock" style="width: 50.3%;">
+          <button id='pd' class="selectbutton" onclick="storestatus('pd');">Yes</button>
+        </div>
+        <div class="rightblock" style="width: 48%; margin-top: -12px; margin-bottom: 50px;">
+          <button id='nonpd' class="selectbutton" onclick="storestatus('nonpd');">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="blocker" id='blocker'></div>
+
+    <div class="largenotif" id="verify">
+      <h2>Please verify the following information</h2>
+      <h3 id="aged">Age:</h3>
+      <h3 id="gend">Gender:</h3>
+      <h3 id="raced">Race:</h3>
+      <h3 id="pdd">PD Status:</h3>
+      <button class="selectbutton" id='ttrs' style="width: 90%; margin-bottom: 10px;" onclick="commencetests();">This is correct, start test!</button>
+      <button class="selectbutton" onclick="closeverify();">Cancel</button>
+    </div>
+
+    <div style="text-align: center; z-index: 5; padding-top: 50px;">
+      <button class="regbutton" onclick="startverify();">Start</button>
+    </div>
+
+  </body>
+</html>

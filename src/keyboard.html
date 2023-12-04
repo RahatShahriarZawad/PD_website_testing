@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='og:viewport' content='width=device-width,initial-scale=1'>
+    <meta name="og:description" content="confetti">
+    <title>PD tests - Keyboard tests</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/utility.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="pacman-favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+      
+    <div style="text-align: center; z-index: 5;">
+      <h1 id='headertitle' style="font-size: 300%;">Level 1</h1>
+    </div>
+
+    <div style="text-align: center; z-index: 5;">
+      <h1 id='statsdisp' style="font-size: 150%;"></h1>
+      <h1 id='statsdisp1' style="font-size: 150%;"></h1>
+      <h1 id='statsdisp2' style="font-size: 150%;"></h1>
+      <h1 id='statsdisp3' style="font-size: 150%;"></h1>
+      <h1 id='statsdisp4' style="font-size: 150%;"></h1>
+    </div>
+
+    <div id='canvas-container' style="float: left; position: absolute; z-index: 1; top: 0px; left: 0px;">
+      <canvas class="myCanvas">
+        <p>Your browser does not support canvas, try with another browser!</p>
+        <canvas id="the-canvas" width="320" height="240" style="position:relative; right:300px;"></canvas>
+      </canvas>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="../js/keyboard.js"></script>
+  </body>
+</html>

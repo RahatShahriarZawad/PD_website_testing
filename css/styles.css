@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Finlandica', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  /* transition: background-color 0.25s linear; */
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  position: fixed;
+  top: 0px;
+  background-color: rgb(25, 25, 25);
+  width: 100%;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+.leftblock{
+  width: 49%;
+  text-align: right;
+  float: left;
+  padding: 10px;
+}
+
+.rightblock{
+  width: 35%;
+  text-align: left;
+  float: left;
+  padding: 10px;
+  padding-top: 22px;
+  padding-bottom: 30px;
+}
+
+.niceenter{
+  border: 2px solid black;
+  background: white;
+}
+
+.nav-items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-items li {
+  display: inline-block;
+  color: white;
+}
+
+.nav-items li a {
+  display: block;
+  padding: 1rem;
+  color: white;
+}
+
+
+.regbutton{
+  height: 100px; 
+  width: 33%;
+  background:  rgb(2, 117, 216); 
+  border: 0px solid red;
+  color: white;
+  border-radius: 15px;
+  font-size: 50px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.regbutton:hover{
+  background-color: rgb(0, 80, 180); 
+}
+
+.selectbutton{
+  height: 50px; 
+  width: 200px;
+  background:  rgb(2, 117, 216); 
+  border: 0px solid red;
+  color: white;
+  border-radius: 15px;
+  font-size: 30px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.selectbutton:hover{
+  background-color: rgb(0, 80, 180); 
+}
+
+.largenotif{
+  position: fixed;
+  width: 40%;
+  height: 60%;
+  left: 30%;
+  top: 20%;
+  border: 3px solid rgb(2, 117, 216);
+  border-radius: 15px;
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+  display: none;
+}
+
+.blocker{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
